@@ -1,0 +1,55 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap';
+
+.spFxFooter {
+  font-family: 'Poppins', sans-serif;
+
+  .container {
+    width: 98%;
+    margin: 0 auto;
+    padding: 25px 0px;
+    max-width: 1200px;
+    position: relative;
+  }
+
+  footer {
+    background-color: #fff;
+    // float: left;
+    margin: 30px auto 0;
+    position: relative;
+  }
+
+  footer img {
+    height: 36px;
+    float: left;
+    margin-top: 10px;
+    left: 0;
+  }
+
+  footer ul {
+    display: block;
+    text-align: center;
+  }
+
+  footer ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 8px 8px;
+    font-size: 13px;
+  }
+
+  footer ul li a {
+    color: #404040;
+    text-decoration: none;
+  }
+
+  footer ul li a:hover {
+    color: #000;
+  }
+
+}
+
+
+.clear {
+  clear: both;
+}

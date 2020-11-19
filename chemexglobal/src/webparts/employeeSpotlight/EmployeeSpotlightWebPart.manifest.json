@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "47513e54-9963-4eec-8b8c-64df04f9d825",
+  "alias": "EmployeeSpotlightWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Other" },
+    "title": { "default": "Employee Spotlight" },
+    "description": { "default": "Employee Spotlight description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "Employee Spotlight"
+    }
+  }]
+}

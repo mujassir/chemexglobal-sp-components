@@ -1,0 +1,112 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap';
+
+:global {
+  .ControlZone--emphasisBackground {
+    background-color: transparent !important;
+  }
+}
+
+.employeeSpotlight {
+  font-family: 'Poppins', sans-serif;
+
+  .container {
+    width: 310px;
+    margin: auto;
+  }
+
+  h3 {
+    font-size: 20px;
+    background-color: #1f2553;
+    text-align: center;
+    border-radius: 6px;
+    color: #fff;
+    display: table;
+    margin: 0 auto -30px;
+    padding: 5px 4%;
+    z-index: 999;
+    position: relative;
+    font-weight: 400;
+  }
+
+
+  ul {
+    /*! background-color: #fff; */
+    display: block;
+    padding: 0;
+    float: left;
+  }
+
+  ul li {
+    list-style-type: none;
+    margin: 0 auto;
+    float: left;
+    width: 100%;
+    /* display: table-cell; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: #c4c4c4;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  ul li img {
+    width: 50%;
+    height: 128px;
+    object-fit: fill;
+    border-radius: 10px 0 0 0;
+  }
+
+  ul li span {
+    font-size: 18px;
+    float: left;
+    width: 45px;
+    text-align: center;
+    padding: 10% 2%;
+    color: #fff;
+    margin: 0 10px 0 0;
+    float: right;
+    width: 42%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+
+  ul li:nth-child(even) {
+    background: #1f2553;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  ul li:nth-child(even) img {
+    float: right;
+    border-radius: 0px 0px 10px 0px;
+  }
+
+  ul li:nth-child(even) span {
+    background: #1f2553;
+  }
+
+  ul li span b {
+    display: block;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+
+.clear {
+  clear: both;
+}
+
+
+.loader {
+  text-align: center;
+  justify-content: center;
+}
+
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #fc9fa9;
+  padding: 10px;
+  border-radius: 5px;
+}

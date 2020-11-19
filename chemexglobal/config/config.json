@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "up-coming-events-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/upComingEvents/UpComingEventsWebPart.js",
+          "manifest": "./src/webparts/upComingEvents/UpComingEventsWebPart.manifest.json"
+        }
+      ]
+    },
+    "sp-fx-footer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spFxFooter/SpFxFooterWebPart.js",
+          "manifest": "./src/webparts/spFxFooter/SpFxFooterWebPart.manifest.json"
+        }
+      ]
+    },
+    "employee-spotlight-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/employeeSpotlight/EmployeeSpotlightWebPart.js",
+          "manifest": "./src/webparts/employeeSpotlight/EmployeeSpotlightWebPart.manifest.json"
+        }
+      ]
+    },
+    "whats-new-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/whatsNew/WhatsNewWebPart.js",
+          "manifest": "./src/webparts/whatsNew/WhatsNewWebPart.manifest.json"
+        }
+      ]
+    },
+    "icon-widget-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/iconWidget/IconWidgetWebPart.js",
+          "manifest": "./src/webparts/iconWidget/IconWidgetWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "UpComingEventsWebPartStrings": "lib/webparts/upComingEvents/loc/{locale}.js",
+    "SpFxFooterWebPartStrings": "lib/webparts/spFxFooter/loc/{locale}.js",
+    "EmployeeSpotlightWebPartStrings": "lib/webparts/employeeSpotlight/loc/{locale}.js",
+    "WhatsNewWebPartStrings": "lib/webparts/whatsNew/loc/{locale}.js",
+    "IconWidgetWebPartStrings": "lib/webparts/iconWidget/loc/{locale}.js"
+  }
+}

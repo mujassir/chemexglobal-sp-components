@@ -1,0 +1,92 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap';
+
+:global{
+  .ControlZone--emphasisBackground{
+    background-color: transparent !important;
+  }
+}
+.upComingEvents {
+  font-family: 'Poppins', sans-serif;
+  
+
+  h3 {
+    font-size: 20px;
+    background-color: #1f2553;
+    text-align: center;
+    border-radius: 6px;
+    color: #fff;
+    display: table;
+    margin: 0 auto -30px;
+    padding: 5px 4%;
+    z-index: 999;
+    position: relative;
+    font-weight: 400;
+  }
+
+  ul {
+    background-color: #fff;
+    display: block;
+    padding: 7%;
+    // float: left;
+    border-radius: 10px;
+  }
+
+  ul li {
+    list-style-type: none;
+    margin: 5% auto 0;
+    // float: left;
+  }
+
+  ul li span {
+    background-color: #c4c4c4;
+    float: left;
+    width: 46px;
+    text-align: center;
+    padding: 1%;
+    color: #fff;
+    margin: 0 10px 0 0;
+    height: 41px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  ul li:nth-child(even) span {
+    background: #1f2553;
+  }
+
+  ul li span b {
+    display: block;
+    font-weight: 400;
+  }
+
+  ul li strong {
+    display: block;
+    // float: right;
+    font-size: 13px;
+  }
+
+  ul li em {
+    font-style: normal;
+    font-size: 15px;
+  }
+}
+
+
+.clear {
+  clear: both;
+}
+
+
+.loader {
+  text-align: center;
+  justify-content: center;
+}
+
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #fc9fa9;
+  padding: 10px;
+  border-radius: 5px;
+}
