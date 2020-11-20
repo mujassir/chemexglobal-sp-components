@@ -11,28 +11,20 @@ export default class IconWidgetItem extends React.Component<any, {}> {
       <li>
         <a href={this.props.item.ApplicationLink} target="_blank" data-interception="off">
           <img src={this.props.item.IconImage} />
+          <strong>
+            {this.trimIconName(this.props.item.IconName, 11)}
+          </strong>
         </a>
         {/* <strong>Text Here</strong> */}
       </li>
     );
   }
 
-  private trimText(input: string, length: number): string {
+  private trimIconName(input: string, length: number): string {
     if (input.length > length)
-      input = input.substr(0, length) + " ...";
+      input = input.substr(0, length)
     return input;
   }
-  private getMonthName(date: Date): string {
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"];
-    return monthNames[date.getMonth()].substr(0, 3);
-  }
-
-  private getDate(date: Date) {
-    return date.getDate();
-  }
-
-
 
 
 }

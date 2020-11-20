@@ -65,8 +65,9 @@ export default class ListDataManager {
         let results: IIconWidget[] = items.map((p: any) => {
             return {
                 Title: p.Title,
-                ApplicationLink: this.getLinkURL(p.ApplicationLink),
+                IconName: p.IconName,
                 IconImage: this.getPictureURL(p.IconImage),
+                ApplicationLink: this.getLinkURL(p.ApplicationLink),
             };
         });
         console.log("getIconWidgetData", results);

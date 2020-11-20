@@ -10,14 +10,6 @@
         }
       ]
     },
-    "sp-fx-footer-web-part": {
-      "components": [
-        {
-          "entrypoint": "./lib/webparts/spFxFooter/SpFxFooterWebPart.js",
-          "manifest": "./src/webparts/spFxFooter/SpFxFooterWebPart.manifest.json"
-        }
-      ]
-    },
     "employee-spotlight-web-part": {
       "components": [
         {
@@ -54,7 +46,6 @@
   "externals": {},
   "localizedResources": {
     "UpComingEventsWebPartStrings": "lib/webparts/upComingEvents/loc/{locale}.js",
-    "SpFxFooterWebPartStrings": "lib/webparts/spFxFooter/loc/{locale}.js",
     "EmployeeSpotlightWebPartStrings": "lib/webparts/employeeSpotlight/loc/{locale}.js",
     "WhatsNewWebPartStrings": "lib/webparts/whatsNew/loc/{locale}.js",
     "IconWidgetWebPartStrings": "lib/webparts/iconWidget/loc/{locale}.js",
