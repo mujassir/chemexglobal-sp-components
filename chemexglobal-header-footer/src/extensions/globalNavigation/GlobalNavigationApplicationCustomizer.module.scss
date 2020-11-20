@@ -1,0 +1,27 @@
+.appCustomHeaderFooter {
+
+  .top {
+    color: Red;
+    line-height: 2.5;
+    align-items: center;
+    height: 60px;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    font-size: 30px
+  }
+
+  .bottom {
+    color: Red;
+    height: 40px;
+    align-items: center;
+    line-height: 2.5;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-size: 30px
+  }
+
+}

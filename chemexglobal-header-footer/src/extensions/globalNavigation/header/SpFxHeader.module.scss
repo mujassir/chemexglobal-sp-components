@@ -1,0 +1,84 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap';
+
+
+:global {
+
+  #O365_NavHeader,
+  #O365_NavHeader .o365sx-appName,
+  #O365_NavHeader .o365sx-button {
+    background-color: #1f2553;
+  }
+
+  #spSiteHeader,
+  #spLeftNav {
+    display: none;
+  }
+
+}
+
+.spFxHeader {
+  font-family: 'Poppins', sans-serif;
+
+  .image {
+    width: 100%;
+    height: 150px;
+    background-position-x: center;
+    background-position-y: bottom;
+
+  }
+
+
+
+  header {
+    width: 100%;
+    background-color: #1f2553;
+    padding-top: 6px;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0;
+    width: 98%;
+  }
+
+  .nav {
+    float: left;
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    ul>li {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: normal;
+      position: relative;
+      text-transform: capitalize;
+      background-repeat: no-repeat;
+      background-position: right center;
+      margin: 0 20px;
+
+      a {
+        display: block;
+        color: #FFF;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .logo {
+    float: right;
+
+    img {
+      height: 30px;
+    }
+  }
+
+}
+
+
+.clear {
+  clear: both;
+}

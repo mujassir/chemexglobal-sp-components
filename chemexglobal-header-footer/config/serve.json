@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://netorgft4211301.sharepoint.com/",
+      "customActions": {
+        "e1f5cf54-cc14-4d1e-a87a-19376dc9fb27": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "HeaderListName": "GlobalNavigation",
+            "FooterListName": "Footer Widget"
+          }
+        }
+      }
+    },
+    "globalNavigation": {
+      "pageUrl": "https://netorgft4211301.sharepoint.com/",
+      "customActions": {
+        "e1f5cf54-cc14-4d1e-a87a-19376dc9fb27": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "HeaderListName": "GlobalNavigation",
+            "FooterListName": "Footer Widget"
+          }
+        }
+      }
+    }
+  }
+}

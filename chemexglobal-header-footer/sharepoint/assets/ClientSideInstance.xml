@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="GlobalNavigation"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="e1f5cf54-cc14-4d1e-a87a-19376dc9fb27"
+        Properties="{&quot;HeaderListName&quot;:&quot;GlobalNavigation&quot;}">
+    </ClientSideComponentInstance>
+</Elements>
