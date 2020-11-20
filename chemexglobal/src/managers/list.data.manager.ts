@@ -6,6 +6,7 @@ import IUpComingEvent from "../models/IUpComingEvent";
 import IEmployeeSpotlight from "../models/IEmployeeSpotlight";
 import IWhatsNew from "../models/IWhatsNew";
 import IIconWidget from "../models/IIconWidget";
+import ISliderImage from "../models/ISliderImage";
 
 
 export default class ListDataManager {
@@ -69,6 +70,21 @@ export default class ListDataManager {
             };
         });
         console.log("getIconWidgetData", results);
+        return results;
+    }
+    public static async getSliderWidgetData(listName: string): Promise<ISliderImage[]> {
+        let list = sp.web.lists.getByTitle(listName).items;
+        const items: any[] = await list.get();
+        console.log("items;", items);
+        let results: ISliderImage[] = items.map((p: any) => {
+            return {
+                Title: p.Title,
+                EventName: p.EventName,
+                EventDescription: p.EventDescription,
+                EventImage: this.getPictureURL(p.EventImage),
+            };
+        });
+        console.log("getSliderWidgetData", results);
         return results;
     }
 

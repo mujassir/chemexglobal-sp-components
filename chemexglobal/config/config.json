@@ -41,6 +41,14 @@
           "manifest": "./src/webparts/iconWidget/IconWidgetWebPart.manifest.json"
         }
       ]
+    },
+    "slider-widget-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/sliderWidget/SliderWidgetWebPart.js",
+          "manifest": "./src/webparts/sliderWidget/SliderWidgetWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -49,6 +57,8 @@
     "SpFxFooterWebPartStrings": "lib/webparts/spFxFooter/loc/{locale}.js",
     "EmployeeSpotlightWebPartStrings": "lib/webparts/employeeSpotlight/loc/{locale}.js",
     "WhatsNewWebPartStrings": "lib/webparts/whatsNew/loc/{locale}.js",
-    "IconWidgetWebPartStrings": "lib/webparts/iconWidget/loc/{locale}.js"
+    "IconWidgetWebPartStrings": "lib/webparts/iconWidget/loc/{locale}.js",
+    "SliderWidgetWebPartStrings": "lib/webparts/sliderWidget/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
   }
 }

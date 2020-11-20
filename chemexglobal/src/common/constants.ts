@@ -23,6 +23,12 @@ export default class Constants {
             Description_MaxLength: 27,
         },
 
+        SliderWidget:{
+            Title: 'Slider Widget',
+            ListName: 'Slider Widget',
+            Description_MaxLength: 27,
+        },
+
         Loader: {
             type:'ThreeDots',
             color:'#1f2553',
