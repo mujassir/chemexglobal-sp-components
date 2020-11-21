@@ -67,10 +67,12 @@ export default class WhatsNew extends React.Component<IWhatsNewProps, {}> {
       return (
         <ul>
           <li>
-            <img src={item.NewsImage} />
-            <strong>
-              {item.NewsDescription}
-            </strong>
+            <a href={item.NewsURL}>
+              <img src={item.NewsImage} />
+              <strong>
+                {item.NewsDescription}
+              </strong>
+            </a>
           </li>
         </ul>
       );

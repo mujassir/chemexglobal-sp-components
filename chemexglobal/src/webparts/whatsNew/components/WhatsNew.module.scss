@@ -41,6 +41,10 @@
     justify-content: center;
     align-items: center;
   }
+  ul li a {
+    text-decoration: none;
+    cursor: pointer;
+  }
 
   ul li img {
     width: 100%;

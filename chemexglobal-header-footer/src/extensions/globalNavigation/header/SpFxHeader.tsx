@@ -6,12 +6,14 @@ import Constants from '../../../common/constants';
 import ListDataManager from '../../../common/list.data.manager';
 import IHeaderLink from '../../../common/IHeaderLink';
 import HeaderMenu from './HeaderMenu';
+import * as $ from 'jquery';
 
 
 export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
   public state = {
     links: null
   };
+
 
   public render(): React.ReactElement<ISpFxHeaderProps> {
     return (
@@ -22,7 +24,6 @@ export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
           <div className={styles.container}>
 
             <div className="nav">
-              <div id="menu-button"></div>
               <HeaderMenu links={this.state.links}></HeaderMenu>
             </div>
             <div className={styles.logo}> <img src="http://paavanprakriti.com/chemexglobal/images/logo.png" /> </div>
@@ -36,6 +37,19 @@ export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
 
   public componentDidMount() {
     this.getLinksData();
+    $(document).ready(() => {
+      $('.nav').prepend('<div id="menu-button"></div>');
+      $('.nav #menu-button').on('click', function () {
+        var menu = $(this).next('ul');
+        if (menu.hasClass('open')) {
+          menu.removeClass('open');
+        }
+        else {
+          menu.addClass('open');
+        }
+      });
+    });
+
   }
   private async getLinksData() {
     let listName = this.props.listName || Constants.Defaults.Header.ListName;

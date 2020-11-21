@@ -62,6 +62,10 @@
     background-color: #E4E7E9;
   }
 
+  .webPartContainer {
+    display: none !important;
+  }
+
 
   .nav,
   .nav ul,
@@ -99,6 +103,12 @@
     width: max-content;
     float: left;
   }
+
+  // .nav {
+  //   width: auto !important;
+  //   top: -10px;
+  //   left: 0;
+  // }
 
   .nav>ul {
     display: block;
@@ -271,13 +281,13 @@
 
   .nav ul ul li a:hover {
     color: #fff !important;
-    background: #1581b9;
+    background: #1f2553;
   }
 
   .nav ul ul li:hover>a,
   .nav ul ul li.active>a {
     color: #fff;
-    background: #1581b9;
+    background: #1f2553;
   }
 
   .nav ul ul li:first-child>a {
@@ -324,6 +334,13 @@
     border-left-color: transparent;
   }
 
+  @media only screen and (max-width: 980px) {
+    .nav ul {
+      display: none;
+    }
+
+  }
+
   @media only screen and (min-width: 981px) and (max-width:1100px) {
     .nav>ul>li {
       font-size: 15px;
@@ -358,7 +375,9 @@
     .nav>ul.open {
       display: block;
       /*! border-top: 1px solid #fff; */
-      background-color: #1f2553;
+      // background-color: #1f2553;
+      color: #000;
+      background-color: #d9d9d9;
       z-index: 10;
       position: absolute;
       width: auto;
@@ -389,7 +408,7 @@
     .nav>ul>li>a {
       padding: 5px 10px;
       text-decoration: none;
-      color: #fff;
+      color: #000;
       font-size: 15px;
       text-transform: uppercase;
       margin: 0px 0px 0px;
@@ -403,6 +422,14 @@
       /*! border-left: 1px solid #fff; */
       /*! border-right: 1px solid #fff; */
       /*! border-top: 1px solid #fff; */
+    }
+
+    .nav>ul>li>ul {
+      display: block;
+    }
+
+    .nav>ul>li>ul>li>a {
+      padding-left: 20px !important;
     }
 
     .nav>ul>li.has-sub>a {
@@ -425,6 +452,8 @@
       cursor: pointer;
       text-align: left;
       font-family: 'proxima_nova_rgregular';
+      margin-top: -8px;
+      margin-left: 1px;
     }
 
     .nav ul ul,
@@ -454,7 +483,7 @@
     }
 
     .nav ul ul li {
-      color: #383737;
+      // color: #383737;
       list-style-type: none;
       padding: 0px 0px !important;
       width: 100%;
@@ -514,15 +543,15 @@
       display: none;
     }
 
-    .nav>ul>li>ul::after {
-      display: none;
-    }
+    // .nav>ul>li>ul::after {
+    //   display: none;
+    // }
 
     .nav>ul>li:hover>a,
     .nav>ul>li>a:hover,
     .nav>ul>li.active>a {
       color: #fff;
-      background: #1581b9;
+      background: #1f2553;
     }
 
     .nav ul ul li a:hover {
@@ -536,11 +565,11 @@
 
     .nav>ul>li>a:hover {
       color: #fff !important;
-      background: #1581b9;
+      background: #1f2553;
     }
 
     .nav>ul>li:hover>a {
-      color: #464747;
+      color: #CCC;
     }
   }
 

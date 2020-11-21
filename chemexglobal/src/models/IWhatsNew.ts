@@ -3,5 +3,6 @@ export default interface IWhatsNew {
     Date: Date;
     NewsImage: string;
     NewsDescription: string;
+    NewsURL: string;
     // EmployeeHightlights: string;
 }

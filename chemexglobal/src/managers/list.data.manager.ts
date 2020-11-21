@@ -50,6 +50,7 @@ export default class ListDataManager {
         let results: IWhatsNew[] = items.map((p: any) => {
             return {
                 Title: p.Title,
+                NewsURL: this.getLinkURL(p.NewsURL),
                 NewsImage: this.getPictureURL(p.NewsImage),
                 NewsDescription: p.NewsDescription,
                 Date: new Date(p.Date),
