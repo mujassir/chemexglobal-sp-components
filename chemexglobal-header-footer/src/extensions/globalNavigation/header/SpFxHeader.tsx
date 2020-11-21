@@ -5,6 +5,8 @@ import styles from './SpFxHeader.module.scss';
 import Constants from '../../../common/constants';
 import ListDataManager from '../../../common/list.data.manager';
 import IHeaderLink from '../../../common/IHeaderLink';
+import HeaderMenu from './HeaderMenu';
+
 
 export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
   public state = {
@@ -18,13 +20,10 @@ export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
         </div>
         <header id="home">
           <div className={styles.container}>
-            <div className={styles.nav}>
-              <ul>
-                {this.state.links && this.state.links.map((item: IHeaderLink, key: any) => {
-                  return (<li key={key}> <a href={item.ParentUrl}>{item.Title}</a></li>);
-                })}
-              
-              </ul>
+
+            <div className="nav">
+              <div id="menu-button"></div>
+              <HeaderMenu links={this.state.links}></HeaderMenu>
             </div>
             <div className={styles.logo}> <img src="http://paavanprakriti.com/chemexglobal/images/logo.png" /> </div>
             <div className={styles.clear}></div>
