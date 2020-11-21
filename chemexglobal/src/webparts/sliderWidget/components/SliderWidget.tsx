@@ -25,6 +25,7 @@ export default class SliderWidget extends React.Component<ISliderWidgetProps, {}
         imageSrc: p.EventImage,
         title: p.EventName,
         description: p.EventDescription,
+        url: p.EventURL,
         showDetailsOnHover: true,
         imageFit: ImageFit.cover
       };

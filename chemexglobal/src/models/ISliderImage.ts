@@ -3,4 +3,5 @@ export default interface ISliderImage {
     EventImage: string;
     EventName: string;
     EventDescription: string;
+    EventURL: string;
 }

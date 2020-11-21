@@ -5,7 +5,12 @@
 
   .carouselImageContent {
     height: 400px;
-    width: 800px;
+    width: 100%;
+
+    div[class*='details'] {
+      top: 70% !important;
+      height: 30% !important;
+    }
 
   }
 }

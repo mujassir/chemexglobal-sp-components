@@ -1,14 +1,15 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
 @import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap';
 
-:global{
-  .ControlZone--emphasisBackground{
+:global {
+  .ControlZone--emphasisBackground {
     background-color: transparent !important;
   }
 }
+
 .upComingEvents {
   font-family: 'Poppins', sans-serif;
-  
+
 
   h3 {
     font-size: 20px;
@@ -36,6 +37,11 @@
     list-style-type: none;
     margin: 5% auto 0;
     // float: left;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: inherit;
   }
 
   ul li span {

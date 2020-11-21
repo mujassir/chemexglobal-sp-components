@@ -21,6 +21,7 @@ export default class ListDataManager {
                 Title: p.Title,
                 EventName: p.EventName,
                 EventDescription: p.EventDescription,
+                UpcomingURL: this.getLinkURL(p.UpcomingURL),
                 Date: new Date(p.Date),
             };
         });
@@ -82,6 +83,7 @@ export default class ListDataManager {
                 Title: p.Title,
                 EventName: p.EventName,
                 EventDescription: p.EventDescription,
+                EventURL: this.getLinkURL(p.EventURL),
                 EventImage: this.getPictureURL(p.EventImage),
             };
         });

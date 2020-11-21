@@ -22,7 +22,7 @@ export default class IconWidgetItem extends React.Component<any, {}> {
 
   private trimIconName(input: string, length: number): string {
     if (input.length > length)
-      input = input.substr(0, length)
+      input = input.substr(0, length);
     return input;
   }
 

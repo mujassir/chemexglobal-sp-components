@@ -5,4 +5,5 @@ export default interface IUpComingEvent{
     Date: Date;
     EventName: string;
     EventDescription: string;
+    UpcomingURL: string;
 }

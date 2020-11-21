@@ -11,11 +11,13 @@ export default class UpComingEventItem extends React.Component<any, {}> {
   public render(): React.ReactElement<any> {
     return (
       <li>
-        <span>{this.getDate(this.props.item.Date)}
-          <b>{this.getMonthName(this.props.item.Date)}</b>
-        </span>
-        <strong>{this.props.item.EventName} </strong>
-        <em>{this.trimText(this.props.item.EventDescription, Constants.Defaults.UpcomingEvents.Description_MaxLength)}</em>
+        <a href={this.props.item.UpcomingURL}>
+          <span>{this.getDate(this.props.item.Date)}
+            <b>{this.getMonthName(this.props.item.Date)}</b>
+          </span>
+          <strong>{this.props.item.EventName} </strong>
+          <em>{this.trimText(this.props.item.EventDescription, Constants.Defaults.UpcomingEvents.Description_MaxLength)}</em>
+        </a>
       </li>
     );
   }

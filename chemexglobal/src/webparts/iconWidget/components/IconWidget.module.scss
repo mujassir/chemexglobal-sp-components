@@ -28,7 +28,7 @@
   ul {
     background-color: #fff;
     display: block;
-    padding: 10%;
+    padding: 50px 10px;
     float: left;
     border-radius: 10px;
     text-align: center;
@@ -42,17 +42,16 @@
     background-color: #c4c4c4;
     text-align: center;
     list-style-type: none;
-    margin: 15px 10%;
+    margin: 15px 10px;
     border-radius: 12px;
-    padding: 9px;
-    height: 120px;
-    width: 115px;
+    height: 100px;
+    width: 100px;
     float: left;
     // margin: 10px 0% 10px 20%;
   }
 
   ul li img {
-    max-width: 75px;
+    max-width: 50px;
   }
 
   ul li a {
