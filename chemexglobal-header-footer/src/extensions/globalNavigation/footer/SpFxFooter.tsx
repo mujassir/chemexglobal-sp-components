@@ -13,6 +13,13 @@ export default class SpFxFooter extends React.Component<ISpFxFooterProps, {}> {
   };
   public render(): React.ReactElement<ISpFxFooterProps> {
     return (
+      <div>
+        {/* { this.renderUI()} */}
+      </div>
+    );
+  }
+  public renderUI() {
+    return (
       <div className={styles.spFxFooter}>
 
         <footer>

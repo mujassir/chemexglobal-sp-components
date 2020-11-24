@@ -18,8 +18,8 @@ export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
   public render(): React.ReactElement<ISpFxHeaderProps> {
     return (
       <div className={styles.spFxHeader}>
-        <div className={styles.image} style={{ backgroundImage: 'url(http://paavanprakriti.com/chemexglobal/images/banner.jpg)' }}>
-        </div>
+        {/* <div className={styles.image} style={{ backgroundImage: 'url(http://paavanprakriti.com/chemexglobal/images/banner.jpg)' }}>
+        </div> */}
         <header id="home">
           <div className={styles.container}>
 

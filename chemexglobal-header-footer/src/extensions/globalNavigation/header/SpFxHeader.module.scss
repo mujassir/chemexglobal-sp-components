@@ -193,7 +193,7 @@
     z-index: 2;
     text-align: left;
     width: 250px;
-    background: #f2f2f2;
+    background: #1f2553;
   }
 
   .nav ul ul h3 {
@@ -272,7 +272,7 @@
   }
 
   .nav ul ul li a {
-    color: #464747;
+    color: #FFF;
     display: block;
     font-size: 15px;
     padding: 12px 3%;
@@ -281,13 +281,13 @@
 
   .nav ul ul li a:hover {
     color: #fff !important;
-    background: #1f2553;
+    background: #525254;
   }
 
   .nav ul ul li:hover>a,
   .nav ul ul li.active>a {
     color: #fff;
-    background: #1f2553;
+    background: #525254;
   }
 
   .nav ul ul li:first-child>a {
@@ -376,8 +376,8 @@
       display: block;
       /*! border-top: 1px solid #fff; */
       // background-color: #1f2553;
-      color: #000;
-      background-color: #d9d9d9;
+      color: #FFF;
+      background-color: #1f2553;
       z-index: 10;
       position: absolute;
       width: auto;
@@ -408,7 +408,7 @@
     .nav>ul>li>a {
       padding: 5px 10px;
       text-decoration: none;
-      color: #000;
+      color: #FFF;
       font-size: 15px;
       text-transform: uppercase;
       margin: 0px 0px 0px;
@@ -478,7 +478,7 @@
     }
 
     .nav ul ul {
-      background: #d9d9d9 !important;
+      background: #1f2553 !important;
       padding: 0px 0px 0px 0px !important;
     }
 
@@ -498,7 +498,7 @@
       box-shadow: none;
       padding: 15px 2% !important;
       background: transparent;
-      color: #000;
+      color: #FFF;
       font-size: 15px;
     }
 
@@ -551,7 +551,7 @@
     .nav>ul>li>a:hover,
     .nav>ul>li.active>a {
       color: #fff;
-      background: #1f2553;
+      background: #525254;
     }
 
     .nav ul ul li a:hover {
@@ -565,7 +565,7 @@
 
     .nav>ul>li>a:hover {
       color: #fff !important;
-      background: #1f2553;
+      background: #525254;
     }
 
     .nav>ul>li:hover>a {
