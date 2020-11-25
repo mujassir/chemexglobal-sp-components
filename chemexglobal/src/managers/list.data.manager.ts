@@ -35,6 +35,7 @@ export default class ListDataManager {
         let results: IEmployeeSpotlight[] = items.map((p: any) => {
             return {
                 EmployeeName: p.EmployeeName,
+                EmployeeHighlights: p.EmployeeHighlights,
                 EmployeePicture: this.getPictureURL(p.EmployeePicture),
                 Date: new Date(p.Date),
             };
