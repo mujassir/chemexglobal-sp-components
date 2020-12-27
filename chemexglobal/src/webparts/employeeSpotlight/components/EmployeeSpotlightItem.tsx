@@ -9,13 +9,9 @@ export default class EmployeeSpotlightItem extends React.Component<any, {}> {
   public render(): React.ReactElement<any> {
     return (
       <li>
-        <h4>
-          {this.props.item.EmployeeName}
-        </h4>
-        <img src={this.props.item.EmployeePicture} />
-        <p>
-          {this.props.item.EmployeeHighlights}
-        </p>
+        <h4>{this.props.item.EventPersonName}</h4>
+        <img src={this.props.item.EventPersonImage} />
+        <p>{this.props.item.Description}</p>
       </li>
     );
   }

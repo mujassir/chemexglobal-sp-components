@@ -1,6 +1,6 @@
 export default interface IEmployeeSpotlight {
-    EmployeeName: string;
-    Date: Date;
-    EmployeePicture: string;
-    EmployeeHighlights: string;
+  EventPersonName: string;
+  Date: Date;
+  EventPersonImage: string;
+  Description: string;
 }

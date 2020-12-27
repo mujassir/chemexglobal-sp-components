@@ -11,19 +11,18 @@
   font-family: 'Poppins', sans-serif;
 
   .container {
-    width: 310px;
+    width: 400px;
     margin: auto;
   }
 
   h3 {
     font-size: 20px;
     background-color: #63a4ce;
-    text-align: center;
-    border-radius: 6px;
+    /* text-align: left; */
+    border-radius: 10px 10px 0 0;
     color: #fff;
-    display: table;
-    margin: 0 auto -30px;
-    padding: 5px 4%;
+    margin: 0 calc(23% - 4px) -13px calc(23% - 3px);
+    padding: 5px calc(3% - 6px);
     z-index: 999;
     position: relative;
     font-weight: 400;
@@ -36,6 +35,9 @@
     height: 355px;
     background: #FFF;
     border-radius: 10px;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid #eee;
+    border-top: 0 solid #eee;
   }
 
   ul li {
@@ -51,7 +53,7 @@
   }
 
   ul li img {
-    width: 50%;
+    width: 40%;
     height: 175px;
     object-fit: fill;
     border-radius: 10px;

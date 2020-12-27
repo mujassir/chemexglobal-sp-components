@@ -41,6 +41,14 @@
           "manifest": "./src/webparts/sliderWidget/SliderWidgetWebPart.manifest.json"
         }
       ]
+    },
+    "recent-news-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/recentNews/RecentNewsWebPart.js",
+          "manifest": "./src/webparts/recentNews/RecentNewsWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -50,6 +58,7 @@
     "WhatsNewWebPartStrings": "lib/webparts/whatsNew/loc/{locale}.js",
     "IconWidgetWebPartStrings": "lib/webparts/iconWidget/loc/{locale}.js",
     "SliderWidgetWebPartStrings": "lib/webparts/sliderWidget/loc/{locale}.js",
-    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "RecentNewsWebPartStrings": "lib/webparts/recentNews/loc/{locale}.js"
   }
 }
