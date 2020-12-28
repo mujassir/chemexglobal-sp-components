@@ -22,7 +22,8 @@
     /* text-align: left; */
     border-radius: 10px 10px 0 0;
     color: #fff;
-    margin: 0 24% -13px 24%;
+    margin-bottom: -15px;
+    margin-top:0;
     padding: 5px calc(3% - 6px);
     z-index: 999;
     position: relative;
@@ -36,8 +37,6 @@
     height: 355px;
     background: #FFF;
     // border-radius: 10px;
-    margin-right: calc(24% - 0px);
-    margin-left: calc(24% - 0px);
     border-radius: 0 0 10px 10px;
     border: 1px solid #eee;
     border-top: 0 solid #eee;
