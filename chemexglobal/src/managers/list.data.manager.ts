@@ -33,7 +33,8 @@ export default class ListDataManager {
   public static async getRecentNewsData(listName: string): Promise<IRecentNews[]> {
     let list = sp.web.lists.getByTitle(listName).items;
     const items: any[] = await list.get();
-    let results: IRecentNews[] = items.map((p: any) => {
+    const firstItems:any[] = items.slice(0,3);
+    let results: IRecentNews[] = firstItems.map((p: any) => {
       return {
         ID: p.ID,
         GUID: p.GUID,

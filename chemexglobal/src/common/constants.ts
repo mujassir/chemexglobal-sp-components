@@ -6,8 +6,8 @@ export default class Constants {
       ListName: "What's New Widget",
     },
     EmployeeSpotlight: {
-      Title: "Employee Spotlight",
-      ListName: "Employee Spotlight Widget",
+      Title: "Team Chemex",
+      ListName: "TeamChemex",
     },
 
     IconWidget: {

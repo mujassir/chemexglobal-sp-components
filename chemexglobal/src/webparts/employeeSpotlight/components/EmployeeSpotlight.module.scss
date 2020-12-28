@@ -11,8 +11,9 @@
   font-family: 'Poppins', sans-serif;
 
   .container {
-    width: 400px;
+    width: 100%;
     margin: auto;
+    float: left;
   }
 
   h3 {
@@ -21,7 +22,7 @@
     /* text-align: left; */
     border-radius: 10px 10px 0 0;
     color: #fff;
-    margin: 0 calc(23% - 4px) -13px calc(23% - 3px);
+    margin: 0 24% -13px 24%;
     padding: 5px calc(3% - 6px);
     z-index: 999;
     position: relative;
@@ -34,7 +35,9 @@
     float: left;
     height: 355px;
     background: #FFF;
-    border-radius: 10px;
+    // border-radius: 10px;
+    margin-right: calc(24% - 0px);
+    margin-left: calc(24% - 0px);
     border-radius: 0 0 10px 10px;
     border: 1px solid #eee;
     border-top: 0 solid #eee;
@@ -54,7 +57,7 @@
 
   ul li img {
     width: 40%;
-    height: 175px;
+    height: 200px;
     object-fit: fill;
     border-radius: 10px;
     margin: auto;
