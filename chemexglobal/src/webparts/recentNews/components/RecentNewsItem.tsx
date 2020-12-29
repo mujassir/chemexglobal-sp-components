@@ -9,7 +9,7 @@ export default class RecentNewsItem extends React.Component<any, {}> {
   public render(): React.ReactElement<any> {
     return (
       <li>
-        <a href={this.props.item.ArticleLink}>
+        <a href={this.props.item.EditLink} target="_blank" data-interception="off">
           <strong>{this.props.item.NewsTitle} </strong>
           <em>
             {this.props.item.NewsDescription}

@@ -3,4 +3,5 @@ export default interface IEmployeeSpotlight {
   Date: Date;
   EventPersonImage: string;
   Description: string;
+  EditLink: string;
 }

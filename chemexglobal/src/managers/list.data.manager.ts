@@ -12,6 +12,8 @@ import IRecentNews from '../models/IRecentNews';
 
 
 export default class ListDataManager {
+
+
   public static async getUpcomingEventsData(listName: string): Promise<IUpComingEvent[]> {
     let list = sp.web.lists.getByTitle(listName).items;
     const items: any[] = await list.get();
@@ -31,9 +33,11 @@ export default class ListDataManager {
   }
 
   public static async getRecentNewsData(listName: string): Promise<IRecentNews[]> {
-    let list = sp.web.lists.getByTitle(listName).items;
-    const items: any[] = await list.get();
-    const firstItems:any[] = items.slice(0,3);
+    let siteURL = await sp.site.getWebUrlFromPageUrl(window.location.href);
+    console.log('Site URL: ', siteURL);
+    let list = sp.web.lists.getByTitle(listName);
+    const items: any[] = await list.items.get();
+    const firstItems: any[] = items.slice(0, 3);
     let results: IRecentNews[] = firstItems.map((p: any) => {
       return {
         ID: p.ID,
@@ -43,6 +47,7 @@ export default class ListDataManager {
         NewsDescription: p.NewsDescription,
         ArticleLink: this.getLinkURL(p.ArticleLink),
         DatePublished: new Date(p.DatePublished),
+        EditLink: this.getEditURL(siteURL, listName, p.ID)
       };
     });
     console.log("getRecentNewsData", results);
@@ -52,6 +57,7 @@ export default class ListDataManager {
   public static async getEmployeeSpotlightData(
     listName: string
   ): Promise<IEmployeeSpotlight[]> {
+    let siteURL = await sp.site.getWebUrlFromPageUrl(window.location.href);
     let list = sp.web.lists.getByTitle(listName).items;
     const items: any[] = await list.get();
     let results: IEmployeeSpotlight[] = items.map((p: any) => {
@@ -60,6 +66,7 @@ export default class ListDataManager {
         Description: p.Description,
         EventPersonImage: this.getPictureURL(p.EventPersonImage),
         Date: new Date(p.Date),
+        EditLink: this.getEditURL(siteURL, listName, p.ID)
       };
     });
     console.log("getTeamChemexData", results);
@@ -121,6 +128,15 @@ export default class ListDataManager {
 
   private static getLinkURL(link: any): string {
     return link ? link.Url : undefined;
+  }
+
+  private static getEditURL(siteURL: string, listName: string, id: string): string {
+    listName = listName.split(' ').join('');
+    return `${siteURL}/Lists/${listName}/EditForm.aspx?ID=${id}`;
+  }
+
+  private static getViewURL(id: string, listName: string): string {
+    return `${window.location.origin}/Lists/${listName}/DispForm.aspx?ID=${id}`;
   }
 
   private static getPictureURL(picture: any): string {

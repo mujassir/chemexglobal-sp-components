@@ -6,4 +6,5 @@ export default interface IRecentNews {
   NewsTitle: string;
   NewsDescription: string;
   ArticleLink: string;
+  EditLink: string;
 }
