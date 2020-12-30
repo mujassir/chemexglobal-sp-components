@@ -14,7 +14,7 @@ export default class EmployeeSpotlight extends React.Component<IEmployeeSpotligh
     isLoading: false,
     hasErrors: false,
     errors: null,
-    items: null,
+    item: null,
   };
   public render(): React.ReactElement<IEmployeeSpotlightProps> {
     return (
@@ -51,17 +51,18 @@ export default class EmployeeSpotlight extends React.Component<IEmployeeSpotligh
     return (
       <div className={styles.container}>
         <ul>
-          {this.state.hasErrors
-            ?
-            this.renderError()
-            :
-            this.state.items && this.state.items.map((item: IEmployeeSpotlight, key: any) => {
-              return <EmployeeSpotlightItem item={item} key={key}></EmployeeSpotlightItem>;
-            })
+          {
+            this.state.hasErrors ? this.renderError() : this.renderWidget()
           }
         </ul>
       </div>
 
+    );
+  }
+
+  private renderWidget() {
+    return (
+      this.state.item ? <EmployeeSpotlightItem item={this.state.item}></EmployeeSpotlightItem> : (null)
     );
   }
 
@@ -78,11 +79,11 @@ export default class EmployeeSpotlight extends React.Component<IEmployeeSpotligh
     try {
       this.setState({ isLoading: true, hasErrors: false });
       let listName = this.props.listName || Constants.Defaults.EmployeeSpotlight.ListName;
-      let list = await ListDataManager.getEmployeeSpotlightData(listName);
+      let item = await ListDataManager.getEmployeeSpotlightData(listName);
 
       this.setState({
         isLoading: false,
-        items: list
+        item: item
       });
     } catch (error) {
       console.log('Get List data error: ', error);
