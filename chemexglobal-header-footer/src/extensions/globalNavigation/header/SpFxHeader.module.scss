@@ -47,6 +47,19 @@
 
 :global {
 
+  .custom-chemex-css{
+    color:black;
+  }
+
+  [dir=ltr] .CanvasComponent.LCS .Canvas--edit.Canvas--withLayout {
+    margin-top: 10px;  
+  }
+  
+  .ms-HubNav {
+   display: none;
+  }
+
+
   #O365_NavHeader,
   #O365_NavHeader .o365sx-appName,
   #O365_NavHeader .o365sx-button {

@@ -38,7 +38,7 @@ export default class SpFxFooter extends React.Component<ISpFxFooterProps, {}> {
   }
 
   public componentDidMount() {
-    this.getLinksData();
+    // this.getLinksData();
   }
   private async getLinksData() {
     let listName = this.props.listName || Constants.Defaults.Footer.ListName;

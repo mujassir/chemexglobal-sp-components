@@ -3,6 +3,8 @@ export default class Constants {
 
     public static Defaults = {
 
+        GlobalNavigation_Config_URL: 'https://chemex.sharepoint.com/sites/AppCatalog/_layouts/15/download.aspx?UniqueId=684542198cf14b7fa0c0a434b65a12ba&e=Jx7pMX',
+
         Footer: {
             ListName: 'Footer Widget'
         },

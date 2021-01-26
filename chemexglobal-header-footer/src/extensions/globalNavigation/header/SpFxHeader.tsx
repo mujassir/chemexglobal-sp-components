@@ -11,7 +11,8 @@ import * as $ from 'jquery';
 
 export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
   public state = {
-    links: null
+    links: null,
+    homePageURL: null,
   };
 
 
@@ -27,7 +28,9 @@ export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
               <HeaderMenu links={this.state.links}></HeaderMenu>
             </div>
             <div className={styles.logo}>
+              <a href={this.state.homePageURL} data-interception="off">
               {this.renderLogo()}
+              </a>
             </div>
             <div className={styles.clear}></div>
           </div>
@@ -63,8 +66,12 @@ export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
   }
   private async getLinksData() {
     let listName = this.props.listName || Constants.Defaults.Header.ListName;
+    let homePageURL = await ListDataManager.getHomePageURL(listName);
     let links = await ListDataManager.getHeaderLinks(listName);
-    this.setState({ links: links });
+    this.setState({
+      links: links,
+      homePageURL: homePageURL
+    });
   }
 
 }
