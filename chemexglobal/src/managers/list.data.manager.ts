@@ -56,7 +56,7 @@ export default class ListDataManager {
 
   public static async getEmployeeSpotlightData(
     listName: string
-  ): Promise<IEmployeeSpotlight[]> {
+  ): Promise<IEmployeeSpotlight> {
     let siteURL = await sp.site.getWebUrlFromPageUrl(window.location.href);
     let list = sp.web.lists.getByTitle(listName).items;
     const items: any[] = await list.get();
@@ -69,8 +69,9 @@ export default class ListDataManager {
         EditLink: this.getEditURL(siteURL, listName, p.ID)
       };
     });
+    let index = Math.floor(Math.random() * Math.floor(results.length));
     console.log("getTeamChemexData", results);
-    return results;
+    return results[index];
   }
 
   public static async getWhatsNewData(listName: string): Promise<IWhatsNew[]> {
@@ -132,7 +133,7 @@ export default class ListDataManager {
 
   private static getEditURL(siteURL: string, listName: string, id: string): string {
     listName = listName.split(' ').join('');
-    return `${siteURL}/Lists/${listName}/EditForm.aspx?ID=${id}`;
+    return `${siteURL}/Lists/${listName}/DispForm.aspx?ID=${id}`;
   }
 
   private static getViewURL(id: string, listName: string): string {
