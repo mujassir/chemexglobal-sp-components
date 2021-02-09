@@ -5,12 +5,16 @@ import "@pnp/sp/items";
 import IFooterLink from "./IFooterLink";
 import IHeaderLink from "./IHeaderLink";
 import IMenuItem from "./IMenuItem";
+import { Web } from "@pnp/sp/webs";
+import Constants from "./constants";
 
 
 export default class ListDataManager {
 
     public static async getFooterLinks(listName: string): Promise<IFooterLink[]> {
-        let list = sp.web.lists.getByTitle(listName).items;
+        // let list = sp.web.lists.getByTitle(listName).items;
+        let web = Web(Constants.Defaults.GlobalNavSiteURL);
+        let list = web.lists.getByTitle(listName).items;
         const items: any[] = await list.get();
         console.log("items;", items);
         let results: IFooterLink[] = items.map((p: any) => {
@@ -24,7 +28,9 @@ export default class ListDataManager {
     }
 
     public static async getHeaderLinks(listName: string): Promise<IMenuItem[]> {
-        let list = sp.web.lists.getByTitle(listName).items;
+        // let list = sp.web.lists.getByTitle(listName).items;
+        let web = Web(Constants.Defaults.GlobalNavSiteURL);
+        let list = web.lists.getByTitle(listName).items;
         const items: any[] = await list.get();
         console.log("items;", items);
         let results: IHeaderLink[] = items.map((p: any) => {

@@ -18,19 +18,12 @@ export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
   public render(): React.ReactElement<ISpFxHeaderProps> {
     return (
       <div className={styles.spFxHeader}>
-        {/* <div className={styles.image} style={{ backgroundImage: 'url(http://paavanprakriti.com/chemexglobal/images/banner.jpg)' }}>
-        </div> */}
         <header id="home">
-          <div className={styles.container}>
-
-            <div className="nav">
-              <HeaderMenu links={this.state.links}></HeaderMenu>
-            </div>
             <div className={styles.logo}>
+              <a href={this.getRootURL()}>
               {this.renderLogo()}
+              </a>
             </div>
-            <div className={styles.clear}></div>
-          </div>
           <div className={styles.clear}></div>
         </header>
       </div >
@@ -45,7 +38,7 @@ export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
 
   }
 
-  public componentDidMount() {
+  public componentDidMount2() {
     this.getLinksData();
     $(document).ready(() => {
       $('.nav').prepend('<div id="menu-button"></div>');
@@ -65,6 +58,10 @@ export default class SpFxHeader extends React.Component<ISpFxHeaderProps, {}> {
     let listName = this.props.listName || Constants.Defaults.Header.ListName;
     let links = await ListDataManager.getHeaderLinks(listName);
     this.setState({ links: links });
+  }
+
+  private getRootURL(){
+    return window.location.origin;
   }
 
 }

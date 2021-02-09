@@ -3,6 +3,8 @@ export default class Constants {
 
     public static Defaults = {
 
+        GlobalNavSiteURL: "https://chemex.sharepoint.com/sites/intranet",
+
         Footer: {
             ListName: 'Footer Widget'
         },
